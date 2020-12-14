@@ -10,6 +10,7 @@ import Box from "@material-ui/core/Box";
 import Customerslist from "./components/Customerslist";
 import TrainingsOverview from "./components/TrainingsOverview";
 import DeleteTraining from "./components/DeleteTraining";
+import Calendar from "./components/Calendar";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -74,6 +75,7 @@ export default function ScrollableTabsButtonAuto() {
           <Tab label="Training activities overview" {...a11yProps(0)} />
           <Tab label="Customers" {...a11yProps(1)} />
           <Tab label="Edit training activities" {...a11yProps(2)} />
+          <Tab label="Calendar" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
 
@@ -87,6 +89,10 @@ export default function ScrollableTabsButtonAuto() {
 
       <TabPanel value={value} index={2}>
         <DeleteTraining />
+      </TabPanel>
+
+      <TabPanel value={value} index={3}>
+        <Calendar />
       </TabPanel>
     </div>
   );
